@@ -7,7 +7,7 @@ const categoryrouter = require('./routes/categoryRouter');
 const ApiError = require('./utils/ApiError');
 const globalError = require('./middlewares/errorMiddleware')
 const subCategories = require('./routes/subCategoryRoute')
-dotenv.config({ path: "config.env" });
+dotenv.config();
 app.use(express.json());
 if (process.env.NODE_ENV === "development") {
     app.use(morgan('dev'));
