@@ -8,7 +8,10 @@ exports.getSubCatogeries = asyncHandler(async (req, res) => {
     const page = req.query.page * 1 || 1;
     const limit = req.query.limit * 1 || 5;
     const skip = (page - 1) * limit;
-    const subCategories = await SubCategory.find({}).limit(limit).skip(skip);
+    const subCategories = await SubCategory.find({category:req.body.category}).limit(limit).skip(skip).populate('category');
+    if (!subCategories) {
+        return next(new ApiError('No subcategories found', 404));
+    }
     res.status(200).json({ results: subCategories.length, page, data: subCategories });
 });
 

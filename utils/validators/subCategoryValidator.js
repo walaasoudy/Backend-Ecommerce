@@ -19,7 +19,7 @@ exports.createSubCategoryValidator = [
       req.body.slug = slugify(val);
       return true;
     }),
-  check('category')
+  check('Category')
     
     .isMongoId()
     .withMessage('Invalid Category id format'),
