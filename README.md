@@ -29,6 +29,5 @@ This is the backend for the E-Commerce platform developed using Node.js, Express
 ### Install the dependencies:
    npm install
    
-
-## Create a .env file in the root directory .
+### Create a .env file in the root directory .
 
