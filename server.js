@@ -9,6 +9,8 @@ const globalError = require('./middlewares/errorMiddleware')
 const subCategories = require('./routes/subCategoryRoute')
 const brandRouter = require('./routes/brand')
 const product = require('./routes/product')
+const authRoute = require("./routes/user");
+
 dotenv.config();
 app.use(express.json());
 if (process.env.NODE_ENV === "development") {
@@ -23,7 +25,7 @@ app.use('/api/v1/categories', categoryrouter);
 app.use('/api/v1/subCategories', subCategories);
 app.use('/api/v1/brands', brandRouter);
 app.use('/api/v1/products', product);
-
+app.use("/api/v1/auth", authRoute);
 app.all('*', (req, res, next) => {
     next(new ApiError(`Can't find this route: ${req.originalUrl}`, 400));
   });
