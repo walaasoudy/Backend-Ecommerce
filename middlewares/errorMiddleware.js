@@ -8,6 +8,7 @@ const sendErrorForDev = (err, res) =>
     stack: err.stack,
   });
 
+
 const sendErrorForProd = (err, res) =>
   res.status(err.statusCode).json({
     status: err.status,
