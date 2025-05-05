@@ -1,5 +1,4 @@
-# Backend-Ecommerce
-# E-Commerce Backend
+## E-Commerce Backend
 
 This is the backend for the E-Commerce platform developed using Node.js, Express, MongoDB, and JWT for authentication.
 
@@ -22,12 +21,34 @@ This is the backend for the E-Commerce platform developed using Node.js, Express
 
    ```bash
    git clone https://github.com/walaasoudy/Backend-Ecommerce
-   
-### Go to the project directory:
-   cd e-commerce-backend
-  
-### Install the dependencies:
-   npm install
-   
-### Create a .env file in the root directory .
+   ```
 
+2. Go to the project directory:
+
+   ```bash
+   cd Backend-Ecommerce
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Create a `.env` file in the root directory with the following content:
+
+   ```env
+   PORT=8000
+   NODE_ENV=development
+   DB_URL=mongodb+srv://<yourMongoDBConnectionURL>
+   JWT_SECRET=yourSecretKey
+   JWT_EXPIRE_TIME=1h
+   ```
+
+### Running the Application
+
+To start the application, run:
+
+```bash
+npm run dev
+```
