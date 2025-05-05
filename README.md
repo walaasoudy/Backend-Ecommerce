@@ -24,9 +24,9 @@ This is the backend for the E-Commerce platform developed using Node.js, Express
    git clone https://github.com/walaasoudy/Backend-Ecommerce
    
 ### Go to the project directory:
-  ```bash
-   cd e-commerce-backend
 
+   cd e-commerce-backend
+  
 ### Install the dependencies:
   ```bash
    npm install
